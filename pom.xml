@@ -114,6 +114,7 @@
     <module>comixed-library</module>
     <module>comixed-tasks</module>
     <module>comixed-services</module>
+    <module>comixed-plugin-runner</module>
     <module>comixed-rest-api</module>
     <module>comixed-frontend</module>
     <module>comixed-app</module>
