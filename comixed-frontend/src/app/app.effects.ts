@@ -20,11 +20,9 @@
 import { SingleComicScrapingEffects } from 'app/effects/single-comic-scraping.effects';
 import { DuplicatesEffects } from 'app/effects/duplicates.effects';
 import { UserAdminEffects } from 'app/effects/user-admin.effects';
-import { ReadingListEffects } from 'app/effects/reading-list.effects';
 
 export const EFFECTS = [
   SingleComicScrapingEffects,
   DuplicatesEffects,
-  UserAdminEffects,
-  ReadingListEffects
+  UserAdminEffects
 ];

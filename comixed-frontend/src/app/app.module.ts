@@ -124,7 +124,6 @@ import { ComicDownloadLinkPipe } from './pipes/comic-download-link.pipe';
 import { MissingComicsPipe } from './pipes/missing-comics.pipe';
 import { MissingComicsPageComponent } from './ui/pages/library/missing-comics-page/missing-comics-page.component';
 import { ScrapingIssueTitlePipe } from './pipes/scraping-issue-title.pipe';
-import { ReadingListService } from 'app/services/reading-list.service';
 import { ReadingListPageComponent } from './ui/pages/reading-lists/reading-list-page/reading-list-page.component';
 import { ReadingListsPageComponent } from './ui/pages/reading-lists/reading-lists-page/reading-lists-page.component';
 import { REDUCERS } from 'app/app.reducers';
@@ -264,7 +263,6 @@ import { TranslateMessageFormatCompiler } from 'ngx-translate-messageformat-comp
     LibraryDisplayAdaptor,
     UserService,
     ComicService,
-    ReadingListService,
     MessageService,
     [{ provide: HTTP_INTERCEPTORS, useClass: XhrInterceptor, multi: true }],
     ConfirmationService
