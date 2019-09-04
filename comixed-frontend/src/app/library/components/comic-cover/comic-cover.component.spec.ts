@@ -25,8 +25,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { PanelModule } from 'primeng/panel';
 import { CardModule } from 'primeng/card';
-import { ComicTitlePipe } from 'app/pipes/comic-title.pipe';
-import { ComicCoverUrlPipe } from 'app/pipes/comic-cover-url.pipe';
+import { ComicTitlePipe } from 'app/library/pipes/comic-title.pipe';
+import { ComicCoverUrlPipe } from 'app/library/pipes/comic-cover-url.pipe';
 import {
   COMIC_1,
   COMIC_FILE_1,

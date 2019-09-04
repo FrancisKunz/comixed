@@ -32,7 +32,6 @@ import { LibraryService } from './services/library.service';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../../environments/environment';
 import { LibraryAdaptor } from './adaptors/library.adaptor';
-import { CardModule } from 'primeng/card';
 import * as fromImport from './reducers/import.reducer';
 import { ImportEffects } from './effects/import.effects';
 import { ImportAdaptor } from 'app/library/adaptors/import.adaptor';
@@ -43,10 +42,43 @@ import * as fromReadingList from './reducers/reading-list.reducer';
 import { ReadingListEffects } from './effects/reading-list.effects';
 import { ReadingListService } from 'app/library/services/reading-list.service';
 import { ReadingListAdaptor } from 'app/library/adaptors/reading-list.adaptor';
+import { ComicCoverComponent } from 'app/library/components/comic-cover/comic-cover.component';
+import { CardModule } from 'primeng/card';
+import { LibraryRoutingModule } from 'app/library/library-routing.module';
+import { ComicDetailsPageComponent } from 'app/library/pages/comic-details-page/comic-details-page.component';
+import { ComicTitlePipe } from 'app/library/pipes/comic-title.pipe';
+import { ComicDownloadLinkPipe } from 'app/library/pipes/comic-download-link.pipe';
+import { ComicCoverUrlPipe } from 'app/library/pipes/comic-cover-url.pipe';
+import { TranslateModule } from '@ngx-translate/core';
+import { ButtonModule } from 'primeng/button';
+import {
+  BlockUIModule,
+  DropdownModule,
+  InplaceModule,
+  PanelModule,
+  ProgressBarModule,
+  SplitButtonModule,
+  TabViewModule,
+  TooltipModule
+} from 'primeng/primeng';
+import { ComicOverviewComponent } from 'app/library/components/comic-overview/comic-overview.component';
+import { ComicStoryComponent } from 'app/library/components/comic-story/comic-story.component';
+import { ComicReaderComponent } from 'app/library/components/comic-reader/comic-reader.component';
+import { ComicCreditsComponent } from 'app/library/components/comic-credits/comic-credits.component';
+import { ComicPagesComponent } from 'app/library/components/comic-pages/comic-pages.component';
+import { ComicDetailsEditorComponent } from 'app/library/components/comic-details-editor/comic-details-editor.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataViewModule } from 'primeng/dataview';
+import { ComicGroupingCardComponent } from 'app/library/components/comic-grouping-card/comic-grouping-card.component';
+import { ComicPageUrlPipe } from 'app/library/pipes/comic-page-url.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    LibraryRoutingModule,
+    TranslateModule.forRoot(),
     EffectsModule.forFeature([
       LibraryEffects,
       ImportEffects,
@@ -68,9 +100,34 @@ import { ReadingListAdaptor } from 'app/library/adaptors/reading-list.adaptor';
     StoreModule.forFeature(
       fromReadingList.READING_LIST_FEATURE_KEY,
       fromReadingList.reducer
-    )
+    ),
+    CardModule,
+    ButtonModule,
+    TabViewModule,
+    DropdownModule,
+    InplaceModule,
+    PanelModule,
+    DataViewModule,
+    BlockUIModule,
+    ProgressBarModule,
+    TooltipModule,
+    SplitButtonModule
   ],
-  declarations: [],
+  declarations: [
+    ComicDetailsPageComponent,
+    ComicCoverComponent,
+    ComicOverviewComponent,
+    ComicStoryComponent,
+    ComicReaderComponent,
+    ComicCreditsComponent,
+    ComicPagesComponent,
+    ComicDetailsEditorComponent,
+    ComicGroupingCardComponent,
+    ComicCoverUrlPipe,
+    ComicTitlePipe,
+    ComicDownloadLinkPipe,
+    ComicPageUrlPipe
+  ],
   providers: [
     LibraryService,
     LibraryAdaptor,
@@ -80,7 +137,23 @@ import { ReadingListAdaptor } from 'app/library/adaptors/reading-list.adaptor';
     ReadingListService,
     ReadingListAdaptor
   ],
-  exports: [CommonModule]
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ComicCoverComponent,
+    CardModule,
+    ButtonModule,
+    TabViewModule,
+    DropdownModule,
+    InplaceModule,
+    PanelModule,
+    DataViewModule,
+    BlockUIModule,
+    ProgressBarModule,
+    TooltipModule,
+    SplitButtonModule
+  ]
 })
 export class LibraryModule {
   static forRoot(): ModuleWithProviders {

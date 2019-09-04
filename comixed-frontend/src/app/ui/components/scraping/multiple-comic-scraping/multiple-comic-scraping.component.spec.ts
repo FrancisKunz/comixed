@@ -21,8 +21,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CardModule } from 'primeng/card';
 import { Store, StoreModule } from '@ngrx/store';
 import { AppState } from 'app/app.state';
-import { ComicDetailsEditorComponent } from 'app/ui/components/comic/comic-details-editor/comic-details-editor.component';
-import { ComicCoverUrlPipe } from 'app/pipes/comic-cover-url.pipe';
+import { ComicDetailsEditorComponent } from 'app/library/components/comic-details-editor/comic-details-editor.component';
+import { ComicCoverUrlPipe } from 'app/library/pipes/comic-cover-url.pipe';
 import { MultipleComicScrapingComponent } from './multiple-comic-scraping.component';
 import { BlockUIModule } from 'primeng/blockui';
 import {
@@ -33,7 +33,7 @@ import {
 } from 'primeng/primeng';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { VolumeListComponent } from 'app/ui/components/scraping/volume-list/volume-list.component';
+import { VolumeListComponent } from 'app/library/components/volume-list/volume-list.component';
 import { TableModule } from 'primeng/table';
 import { ScrapingIssueTitlePipe } from 'app/pipes/scraping-issue-title.pipe';
 import { REDUCERS } from 'app/app.reducers';

@@ -31,7 +31,7 @@ import { UserService } from 'app/services/user.service';
 import { UserServiceMock } from 'app/services/user.service.mock';
 import { ComicService } from 'app/services/comic.service';
 import { ComicServiceMock } from 'app/services/comic.service.mock';
-import { ComicPageUrlPipe } from 'app/pipes/comic-page-url.pipe';
+import { ComicPageUrlPipe } from 'app/library/pipes/comic-page-url.pipe';
 import { ComicPagesComponent } from './comic-pages.component';
 import { REDUCERS } from 'app/app.reducers';
 import { HttpClientTestingModule } from '@angular/common/http/testing';

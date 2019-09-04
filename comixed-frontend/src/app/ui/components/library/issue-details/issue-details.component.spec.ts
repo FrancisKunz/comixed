@@ -21,7 +21,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { TableModule } from 'primeng/table';
 import { PanelModule } from 'primeng/panel';
-import { ComicCoverUrlPipe } from 'app/pipes/comic-cover-url.pipe';
+import { ComicCoverUrlPipe } from 'app/library/pipes/comic-cover-url.pipe';
 import { COMIC_1 } from 'app/library';
 import { IssueDetailsComponent } from './issue-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

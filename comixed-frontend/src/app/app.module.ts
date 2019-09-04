@@ -59,13 +59,6 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { XhrInterceptor } from 'app/xhr.interceptor';
 import { ComicService } from 'app/services/comic.service';
-import { ComicDetailsPageComponent } from 'app/ui/pages/comic-details-page/comic-details-page.component';
-import { ComicReaderComponent } from 'app/ui/components/comic/comic-reader/comic-reader.component';
-import { ComicDetailsEditorComponent } from 'app/ui/components/comic/comic-details-editor/comic-details-editor.component';
-import { ComicOverviewComponent } from 'app/ui/components/comic/comic-overview/comic-overview.component';
-import { ComicStoryComponent } from 'app/ui/components/comic/comic-story/comic-story.component';
-import { ComicCreditsComponent } from 'app/ui/components/comic/comic-credits/comic-credits.component';
-import { ComicPagesComponent } from 'app/ui/components/comic/comic-pages/comic-pages.component';
 import { MainPageComponent } from 'app/ui/pages/main-page/main-page.component';
 import { LoginComponent } from 'app/ui/components/login/login.component';
 import { UserService } from 'app/services/user.service';
@@ -77,11 +70,10 @@ import { IssueDetailsComponent } from 'app/ui/components/library/issue-details/i
 import { EffectsModule } from '@ngrx/effects';
 import { DuplicatePagesViewComponent } from 'app/ui/views/library/duplicate-pages-view/duplicate-pages-view.component';
 import { PageHashViewComponent } from 'app/ui/views/library/page-hash-view/page-hash-view.component';
-import { VolumeListComponent } from 'app/ui/components/scraping/volume-list/volume-list.component';
+import { VolumeListComponent } from 'app/library/components/volume-list/volume-list.component';
 import { MultipleComicScrapingComponent } from 'app/ui/components/scraping/multiple-comic-scraping/multiple-comic-scraping.component';
 import { LibraryScrapingToolbarComponent } from 'app/ui/components/library/library-scraping-toolbar/library-scraping-toolbar.component';
 import { ScrapingComicListComponent } from 'app/ui/components/scraping/scraping-comic-list/scraping-comic-list.component';
-import { ComicPageUrlPipe } from 'app/pipes/comic-page-url.pipe';
 import { ComicFileCoverUrlPipe } from 'app/pipes/comic-file-cover-url.pipe';
 import { LibraryFilterComponent } from 'app/ui/components/library/library-filter/library-filter.component';
 import { LibraryFilterPipe } from 'app/pipes/library-filter.pipe';
@@ -104,7 +96,6 @@ import { TeamsPageComponent } from 'app/ui/pages/teams/teams-page/teams-page.com
 import { TeamDetailsPageComponent } from 'app/ui/pages/teams/team-details-page/team-details-page.component';
 import { LocationsPageComponent } from 'app/ui/pages/locations/locations-page/locations-page.component';
 import { LocationDetailsPageComponent } from 'app/ui/pages/locations/location-details-page/location-details-page.component';
-import { ComicGroupingCardComponent } from 'app/ui/components/comic/comic-grouping-card/comic-grouping-card.component';
 import { StoryArcsPageComponent } from 'app/ui/pages/story-arcs/story-arcs-page/story-arcs-page.component';
 import { StoryArcDetailsPageComponent } from 'app/ui/pages/story-arcs/story-arc-details-page/story-arc-details-page.component';
 import { ComicListComponent } from 'app/ui/components/library/comic-list/comic-list.component';
@@ -114,7 +105,6 @@ import { ComicFileGridItemComponent } from 'app/ui/components/import/comic-file-
 import { ComicFileListComponent } from 'app/ui/components/import/comic-file-list/comic-file-list.component';
 import { FileSaverModule } from 'ngx-filesaver';
 import { LibraryAdminPageComponent } from 'app/ui/pages/admin/library-admin-page/library-admin-page.component';
-import { ComicDownloadLinkPipe } from './pipes/comic-download-link.pipe';
 import { MissingComicsPipe } from './pipes/missing-comics.pipe';
 import { MissingComicsPageComponent } from './ui/pages/library/missing-comics-page/missing-comics-page.component';
 import { ScrapingIssueTitlePipe } from './pipes/scraping-issue-title.pipe';
@@ -128,9 +118,6 @@ import { LibraryDisplayAdaptor } from 'app/adaptors/library-display.adaptor';
 import { UserModule } from 'app/user/user.module';
 import { EFFECTS } from 'app/app.effects';
 import { LibraryModule } from 'app/library/library.module';
-import { ComicCoverUrlPipe } from 'app/pipes/comic-cover-url.pipe';
-import { ComicTitlePipe } from 'app/pipes/comic-title.pipe';
-import { ComicCoverComponent } from 'app/ui/components/comic/comic-cover/comic-cover.component';
 import { TranslateMessageFormatCompiler } from 'ngx-translate-messageformat-compiler';
 import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { BackendStatusModule } from 'app/backend-status/backend-status.module';
@@ -140,13 +127,6 @@ import { BackendStatusModule } from 'app/backend-status/backend-status.module';
     AppComponent,
     MainPageComponent,
     LoginComponent,
-    ComicDetailsPageComponent,
-    ComicReaderComponent,
-    ComicDetailsEditorComponent,
-    ComicOverviewComponent,
-    ComicStoryComponent,
-    ComicCreditsComponent,
-    ComicPagesComponent,
     LibraryPageComponent,
     ImportPageComponent,
     DuplicatesPageComponent,
@@ -157,7 +137,6 @@ import { BackendStatusModule } from 'app/backend-status/backend-status.module';
     MultipleComicScrapingComponent,
     LibraryScrapingToolbarComponent,
     ScrapingComicListComponent,
-    ComicPageUrlPipe,
     ComicFileCoverUrlPipe,
     LibraryFilterComponent,
     LibraryFilterPipe,
@@ -175,7 +154,6 @@ import { BackendStatusModule } from 'app/backend-status/backend-status.module';
     TeamDetailsPageComponent,
     LocationsPageComponent,
     LocationDetailsPageComponent,
-    ComicGroupingCardComponent,
     StoryArcsPageComponent,
     StoryArcDetailsPageComponent,
     ComicListComponent,
@@ -184,17 +162,13 @@ import { BackendStatusModule } from 'app/backend-status/backend-status.module';
     ComicFileGridItemComponent,
     ComicFileListComponent,
     LibraryAdminPageComponent,
-    ComicDownloadLinkPipe,
     MissingComicsPipe,
     MissingComicsPageComponent,
     ScrapingIssueTitlePipe,
     ReadingListPageComponent,
     ReadingListsPageComponent,
     UserPreferencePipe,
-    ComicFileListItemComponent,
-    ComicCoverUrlPipe,
-    ComicTitlePipe,
-    ComicCoverComponent
+    ComicFileListItemComponent
   ],
   imports: [
     UserModule,

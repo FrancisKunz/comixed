@@ -43,7 +43,7 @@ import { UserService } from 'app/services/user.service';
 import { UserServiceMock } from 'app/services/user.service.mock';
 import { ComicService } from 'app/services/comic.service';
 import { ComicServiceMock } from 'app/services/comic.service.mock';
-import { VolumeListComponent } from 'app/ui/components/scraping/volume-list/volume-list.component';
+import { VolumeListComponent } from 'app/library/components/volume-list/volume-list.component';
 import { ComicDetailsEditorComponent } from './comic-details-editor.component';
 import { ConfirmationService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/primeng';

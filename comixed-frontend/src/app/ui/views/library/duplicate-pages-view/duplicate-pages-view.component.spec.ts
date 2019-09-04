@@ -26,7 +26,7 @@ import { ButtonModule } from 'primeng/button';
 import { SliderModule } from 'primeng/slider';
 import { DropdownModule } from 'primeng/dropdown';
 import { DataViewModule } from 'primeng/dataview';
-import { ComicPageUrlPipe } from 'app/pipes/comic-page-url.pipe';
+import { ComicPageUrlPipe } from 'app/library/pipes/comic-page-url.pipe';
 import { Store, StoreModule } from '@ngrx/store';
 import { AppState } from 'app/app.state';
 import { UserService } from 'app/services/user.service';
